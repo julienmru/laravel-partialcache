@@ -2,7 +2,7 @@
 
 All notable changes to `julienmru/laravel-partialcache` will be documented in this file
 
-## 1.3.0 - 2023-03-17
+## 1.4.0 - 2023-03-17
 
 - Laravel 6.0 and up compatibility
 ## 1.3.0 - 2018-04-16
