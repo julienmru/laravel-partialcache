@@ -1,13 +1,13 @@
 <?php
 
-namespace Spatie\PartialCache;
+namespace JulienMru\PartialCache;
 
 use Illuminate\Cache\TaggableStore;
 use Illuminate\Contracts\View\Factory as View;
 use Illuminate\Contracts\Cache\Repository as Cache;
 use Illuminate\Contracts\Config\Repository as Config;
 use Illuminate\Contracts\Cache\Factory as CacheManager;
-use Spatie\PartialCache\Exceptions\MethodNotSupportedException;
+use JulienMru\PartialCache\Exceptions\MethodNotSupportedException;
 
 class PartialCache
 {
@@ -135,7 +135,7 @@ class PartialCache
      *
      * @param string $tag
      *
-     * @throws \Spatie\PartialCache\Exceptions\MethodNotSupportedException
+     * @throws \JulienMru\PartialCache\Exceptions\MethodNotSupportedException
      */
     public function flush($tag = null)
     {

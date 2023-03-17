@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `spatie/laravel-partialcache` will be documented in this file
+All notable changes to `julienmru/laravel-partialcache` will be documented in this file
 
 ## 1.3.0 - 2018-04-16
 

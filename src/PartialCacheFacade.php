@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\PartialCache;
+namespace JulienMru\PartialCache;
 
 use Illuminate\Support\Facades\Facade;
 

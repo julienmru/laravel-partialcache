@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\PartialCache\Exceptions;
+namespace JulienMru\PartialCache\Exceptions;
 
 class MethodNotSupportedException extends \Exception
 {

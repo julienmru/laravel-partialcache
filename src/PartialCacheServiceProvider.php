@@ -1,9 +1,10 @@
 <?php
 
-namespace Spatie\PartialCache;
+namespace JulienMru\PartialCache;
 
 use Blade;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 
 class PartialCacheServiceProvider extends ServiceProvider
 {
@@ -19,12 +20,12 @@ class PartialCacheServiceProvider extends ServiceProvider
         $directive = config('partialcache.directive');
 
         Blade::directive($directive, function ($expression) {
-            if (starts_with($expression, '(')) {
+            if (Str::startsWith($expression, '(')) {
                 $expression = substr($expression, 1, -1);
             }
 
             return "<?php echo app()->make('partialcache')
-                ->cache(array_except(get_defined_vars(), ['__data', '__path']), {$expression}); ?>";
+                ->cache(Arr::except(get_defined_vars(), ['__data', '__path']), {$expression}); ?>";
         });
     }
 

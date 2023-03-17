@@ -4,11 +4,11 @@ We don't use this package anymore in our own projects and cannot justify the tim
 
 # Laravel Cache Partial Blade Directive
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-partialcache.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-partialcache)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/julienmru/laravel-partialcache.svg?style=flat-square)](https://packagist.org/packages/julienmru/laravel-partialcache)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-partialcache.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-partialcache)
+[![Quality Score](https://img.shields.io/scrutinizer/g/julienmru/laravel-partialcache.svg?style=flat-square)](https://scrutinizer-ci.com/g/julienmru/laravel-partialcache)
 [![StyleCI](https://styleci.io/repos/37589615/shield?branch=master)](https://styleci.io/repos/37589615)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-partialcache.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-partialcache)
+[![Total Downloads](https://img.shields.io/packagist/dt/julienmru/laravel-partialcache.svg?style=flat-square)](https://packagist.org/packages/julienmru/laravel-partialcache)
 
 This package provides a Blade directive for Laravel >=5.1 to cache rendered partials in Laravel.
 
@@ -17,7 +17,7 @@ This package provides a Blade directive for Laravel >=5.1 to cache rendered part
 You can install the package via Composer:
 
 ```bash
-$ composer require spatie/laravel-partialcache
+$ composer require julienmru/laravel-partialcache
 ```
 
 In Laravel 5.5 the package's service provider and facade will be registered automatically. In older versions of Laravel, you must register them manually:
@@ -27,12 +27,12 @@ In Laravel 5.5 the package's service provider and facade will be registered auto
 
 'providers' => [
   ...
-  Spatie\PartialCache\PartialCacheServiceProvider::class,
+  JulienMru\PartialCache\PartialCacheServiceProvider::class,
 ],
 
 'aliases' => [
   ...
-  'PartialCache' => Spatie\PartialCache\PartialCacheFacade::class,
+  'PartialCache' => JulienMru\PartialCache\PartialCacheFacade::class,
 ],
 ```
 
@@ -41,7 +41,7 @@ In Laravel 5.5 the package's service provider and facade will be registered auto
 Optionally publish the config files:
 
 ```bash
-$ php artisan vendor:publish --provider="Spatie\PartialCache\PartialCacheServiceProvider"
+$ php artisan vendor:publish --provider="JulienMru\PartialCache\PartialCacheServiceProvider"
 ```
 
 ## Usage
