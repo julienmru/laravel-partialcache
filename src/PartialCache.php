@@ -39,7 +39,7 @@ class PartialCache
         $this->cacheManager = $cacheManager;
 
         $this->cacheKey = $config->get('partialcache.key');
-        $this->cacheIsTaggable = is_a($this->cacheManager->driver()->getStore(), TaggableStore::class);
+        $this->cacheIsTaggable = is_a($this->cacheManager->driver($config->get('partialcache.cache_store'))->getStore(), TaggableStore::class);
         $this->enabled = $this->determineEnabled($config);
         $this->duration = $config->get('partialcache.default_duration');
     }

@@ -38,7 +38,7 @@ In Laravel 5.5 the package's service provider and facade will be registered auto
 
 *The facade is optional, but the rest of this guide assumes you're using it.*
 
-Optionally publish the config files:
+Publish the config files:
 
 ```bash
 $ php artisan vendor:publish --provider="JulienMru\PartialCache\PartialCacheServiceProvider"
@@ -92,12 +92,13 @@ If you want to flush all entries, you'll need to either call `PartialCache::flus
 
 ### Configuration
 
-Configuration isn't necessary, but there are three options specified in the config file:
+Configuration isn't necessary, but there are environement variables you can use:
 
-- `partialcache.enabled`: Fully enable or disable the cache. Defaults to `true`.
-- `partialcache.directive`: The name of the blade directive to register. Defaults to `cache`.
-- `partialcache.key`: The base key that used for cache entries. Defaults to `partialcache`.
-- `partialcache.default_duration`: The default cache duration in minutes, set `null` to remember forever. Defaults to `null`.
+- `PARTIAL_CACHE_ENABLED`: Fully enable or disable the cache. Defaults to `true`.
+- `PARTIAL_CACHE_DIRECTIVE`: The name of the blade directive to register. Defaults to `cache`.
+- `PARTIAL_CACHE_KEY`: The base key that used for cache entries. Defaults to `partialcache`.
+- `PARTIAL_CACHE_DEFAULT_DURATION`: The default cache duration in minutes, set `null` to remember forever. Defaults to `null`.
+- `PARTIAL_CACHE_DRIVER`: The cache store that should be used to store requests. Defaults to `file`.
 
 ## Change log
 
